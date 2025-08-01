@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Spam Detector</title>
+    <script src="popup.js"></script>
+    <style>
+        body {
+            width: 220px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55); /* Soft Gmail-like gradient */
+            color: #333;
+            text-align: center;
+            padding: 15px;
+            border-radius: 16px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Softer and slightly lifted effect */
+        }
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #ea4335; /* Gmail Red */
+        }
+
+        textarea {
+            width: 90%;
+            padding: 8px;
+            border-radius: 10px; /* More rounded for elegance */
+            border: 2px solid rgba(66, 133, 244, 0.7); /* Softer Gmail Blue */
+            outline: none;
+            font-size: 14px;
+            resize: none;
+            background-color: white;
+            color: #333;
+            box-shadow: 0px 2px 5px rgba(251, 188, 5, 0.2); /* Softer, balanced glow */
+            transition: 0.3s;
+        }
+
+        textarea::placeholder {
+            color: rgba(197, 196, 196, 0.9); /* Softer Gmail Yellow */
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        textarea:focus {
+            border-color: #ea4335; /* More interactive red border */
+            box-shadow: 0px 2px 6px rgba(66, 133, 244, 0.3); /* Subtle blue glow */
+        }
+
+        button {
+            background: #34a853; /* Gmail Green */
+            color: white;
+            border: 2px solid transparent;
+            padding: 9px 14px;
+            font-size: 14px;
+            border-radius: 10px; /* More rounded for a modern feel */
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 10px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background: #ea4335; /* Gmail Red */
+            border-color: #fbbc05; /* Gmail Yellow */
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #result {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Email Spam Detector</h1>
+    <textarea id="emailText" rows="4" placeholder="Paste email text here"></textarea>
+    <br>
+    <button id="checkSpamButton">Check Spam</button>
+    <div id="result"></div>
+</body>
+</html>

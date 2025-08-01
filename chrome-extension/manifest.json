@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Email Spam Detector",
+    "version": "1.0",
+    "description": "Detects spam emails.",
+    "host_permissions": [
+    "http://127.0.0.1:5000/"
+    ],
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://mail.google.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "icons": {
+      "128": "icon.png"
+    }
+  }
